@@ -1,17 +1,4 @@
-# MongoDB
-
-## This Helm chart is deprecated
-
-
-## TL;DR;
-```bash
-$ kubectl create ns mongodb
-```
-
-```bash
-$ helm install my-release . -f values.yaml -n mongodb
-```
-
+# Mongodb Helm Chart Deploy
 ## Prerequisites
 
 - Kubernetes 1.18+
