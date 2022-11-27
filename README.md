@@ -4,9 +4,12 @@
 
 
 ## TL;DR;
+```bash
+$ kubectl create ns mongodb
+```
 
 ```bash
-$ helm install my-release stable/mongodb
+$ helm install my-release . -f values.yaml -n mongodb
 ```
 
 ## Prerequisites
