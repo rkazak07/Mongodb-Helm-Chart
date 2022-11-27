@@ -2,17 +2,6 @@
 
 ## This Helm chart is deprecated
 
-```bash
-$ helm repo add bitnami https://charts.bitnami.com/bitnami
-$ helm install my-release bitnami/<chart>           # Helm 3
-$ helm install --name my-release bitnami/<chart>    # Helm 2
-```
-
-To update an exisiting _stable_ deployment with a chart hosted in the bitnami repository you can execute
-
-```bash
-$ helm repo add bitnami https://charts.bitnami.com/bitnami
-$ helm upgrade my-release bitnami/<chart>
 
 ## TL;DR;
 
