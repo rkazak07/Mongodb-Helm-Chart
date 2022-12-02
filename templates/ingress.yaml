@@ -1,5 +1,5 @@
 {{- if .Values.ingress.enabled }}
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ template "mongodb.fullname" . }}
@@ -22,12 +22,16 @@ spec:
     http:
       paths:
       - path: {{ default "/" .path }}
+        pathType: {{ default "Prefix" .pathType }}
         backend:
-          serviceName: {{ template "mongodb.serviceName" $ }}
-          servicePort: mongodb
+          service:
+            name: {{ template "mongodb.serviceName" $ }}
+            port:
+              number: 27017
   {{- end }}
   {{- if .Values.ingress.tls }}
   tls:
 {{ toYaml .Values.ingress.tls | indent 4 }}
   {{- end }}
 {{- end }}
+
