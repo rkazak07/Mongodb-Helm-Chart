@@ -1,7 +1,7 @@
 # Mongodb Helm Chart Deploy
 ## Prerequisites
 
-- Kubernetes 1.18+
+- Kubernetes 1.21+
 - Helm 2.11+ or Helm 3
 - PV provisioner support in the underlying infrastructure
 - ReadWriteMany volumes for deployment scaling
