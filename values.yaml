@@ -306,7 +306,7 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  storageClass: "local-path"
+  ## storageClass: "-"
   accessModes:
     - ReadWriteOnce
   size: 8Gi
@@ -337,6 +337,7 @@ ingress:
   hosts:
   - name: mongodb.local
     path: /
+    pathType: Prefix
 
   ## The tls configuration for the ingress
   ## see: https://kubernetes.io/docs/concepts/services-networking/ingress/#tls
